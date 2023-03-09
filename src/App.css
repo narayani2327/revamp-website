@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+:root{
+    --lightBlue:#a6d8e3;
+    --black:#000000;
+    --darkBlue:#03002a;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-team, .bottom-team {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.top-team{
+    height: 100vh;
+    width: 25vw;
+    padding: 40px;
+    background-image: linear-gradient(to right, var(--black) , var(--darkBlue));
+    color: var(--lightBlue);
+}
+.bottom-team{
+    height: 100vh;
+    width: 25vw;
+    padding: 40px;
+    background-color: var(--lightBlue);
+}
+.team-img{
+    height: 200px;
+    width: 200px;
+    margin-top: 30px;
+}
+.top-team .team-img{
+    margin-left: 35px;
+}
+.arrow{
+    height: 80px;
+    width: 80px;
+    background-color: var(--lightBlue);
+    border-radius: 50%;
+    padding: 18px;
+}
+.bottom-team .arrow{
+    background-color: var(--darkBlue);
+}
+.team p{
+    font-size: 45px;
+    text-align: center;
+}
+.event, .about{
+    background-image: linear-gradient(to right, var(--black), var(--black) , var(--darkBlue));
+}
+.events-nav ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+.events-nav li{
+    list-style-type: none;
+    font-size: 35px;
+    padding: 20px;
+    background-color: var(--lightBlue);
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.hack, .hackdays, .days{
+    color: white;
+    text-align: justify;
+    padding: 150px;
+    font-size: 25px;
+    display: none;
+}
+.hack a, .hackdays a, .days a{
+    text-decoration: none;
+    color: var(--black);
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px 50px;
+    font-weight: 100;
+    display: inline-block;
+    margin: 100px 400px;
+    margin-bottom: 0px;
+}
+.active{
+    background-color: var(--black) !important;
+    color: white;
+}
+.active-div{
+    display: block;
+}
+
+
+.about{
+    color: white;
+    padding: 50px;
+}
+.title{
+    font-size: 60px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+.about-us{
+    font-size: 30px;
+    color: var(--lightBlue);
+    font-weight: 300;
+}
+.number{
+    font-size: 200px;
+    color: var(--lightBlue);
+}
+.data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+.data-text{
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.data-info{
+    font-size: 25px;
+    font-weight: 400;
+}
+.data img{
+    width: 600px;
+    height: 180px;
+    border: solid white 5px;
+}
