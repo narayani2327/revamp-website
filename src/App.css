@@ -21,6 +21,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    font-weight: 600;
 }
 .top-team{
     height: 100vh;
@@ -38,7 +39,9 @@
 .team-img{
     height: 200px;
     width: 200px;
-    margin-top: 30px;
+    position: relative;
+    top: -200px;
+    opacity: 0;
 }
 .top-team .team-img{
     margin-left: 35px;
@@ -49,13 +52,22 @@
     background-color: var(--lightBlue);
     border-radius: 50%;
     padding: 18px;
+    position: relative;
+    top: 150px;
+    opacity: 0;
 }
 .bottom-team .arrow{
-    background-color: var(--darkBlue);
+    /* filter: invert(87%) sepia(35%) saturate(403%) hue-rotate(230deg) brightness(100%) contrast(89%); */
+    filter: invert(83%) sepia(18%) saturate(414%) hue-rotate(143deg) brightness(95%) contrast(94%);
+    /* filter: invert(4%) sepia(47%) saturate(7383%) hue-rotate(231deg) brightness(76%) contrast(113%); */
+    /* background-color: #4c5a79; */
+    fill: white;
 }
 .team p{
     font-size: 45px;
     text-align: center;
+    position: relative;
+    top: 250px;
 }
 .event, .about{
     background-image: linear-gradient(to right, var(--black), var(--black) , var(--darkBlue));
@@ -69,6 +81,7 @@
     list-style-type: none;
     font-size: 35px;
     padding: 20px;
+    font-weight: 600;
     background-color: var(--lightBlue);
     border-radius: 10px;
     width: 400px;
@@ -81,6 +94,7 @@
     padding: 150px;
     font-size: 25px;
     display: none;
+    font-weight: 400;
 }
 .hack a, .hackdays a, .days a{
     text-decoration: none;
@@ -126,6 +140,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
+    opacity: 1;
 }
 .data-text{
     width: 600px;
