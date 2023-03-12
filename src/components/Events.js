@@ -1,16 +1,30 @@
+import React, { useEffect } from "react";
 // function displayDiv(){
 //     document.getElementsByClassName("hack").style.display = "none";
 //     document.getElementsByClassName("hackdays").style.display = "none";
 //     document.getElementsByClassName("days").style.display = "none";
 // }
 function Events() {
-    // var hack=document.getElementById("hack")
-    // var hackdays=document.getElementById("hackdays")
-    // var days=document.getElementById("days")
-    // hack.addEventListener("click",()=>{
-    //     // displayDiv();
-    //     hack.classList.add("active-div")
-    // });
+    useEffect(()=>{
+        var hack=document.getElementById("hack")
+        var hackdays=document.getElementById("hackdays")
+        var days=document.getElementById("days")
+        hack.addEventListener("click",()=>{
+            hack.classList.add("active")
+            hackdays.classList.remove("active")
+            days.classList.remove("active")
+        });
+        hackdays.addEventListener("click",()=>{
+            hackdays.classList.add("active")
+            hack.classList.remove("active")
+            days.classList.remove("active")
+        });
+        days.addEventListener("click",()=>{
+            days.classList.add("active")
+            hackdays.classList.remove("active")
+            hack.classList.remove("active")
+        });
+    },[])
     return (
         <div className="event">
             <div className="events-nav">
