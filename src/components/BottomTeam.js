@@ -9,32 +9,32 @@ function BottomTeam(props) {
     const handleAnimate=()=>{
         gsap.to(text,{
             y:-250,
-            duration:1.5
+            duration:1
         })
         gsap.to(image,{
-            y:200,
-            duration:1.5,
+            y:280,
+            duration:1,
             opacity:1
         })
         gsap.to(arrow,{
             y:-150,
-            duration:1.5,
+            duration:1,
             opacity:1
         })
     }
     const handleReverse=()=>{
         gsap.to(text,{
             y:0,
-            duration:1.5
+            duration:1
         })
         gsap.to(image,{
             y:0,
-            duration:1.5,
+            duration:1,
             opacity:0
         })
         gsap.to(arrow,{
             y:-0,
-            duration:1.5,
+            duration:1,
             opacity:0
         })
     }
@@ -46,12 +46,15 @@ function BottomTeam(props) {
     },[])
     
     return (
-        <div className="bottom-team" ref={(el=>mainDiv=el)} onMouseLeave={handleReverse} >
+        <div className="bottom-team" ref={(el=>mainDiv=el)} onMouseEnter={handleAnimate} onMouseLeave={handleReverse} >
             <div>
                 <img ref={(el=>image=el)} src={props.image} className="team-img"></img>
-                <p ref={(el=>text=el)} onMouseEnter={handleAnimate} >{props.text}</p>
+                <p ref={(el=>text=el)}>{props.text}</p>
             </div>
             <a href='#'><img ref={(el=>arrow=el)} src={props.arrow} className="arrow"></img></a>
+            {/* <a href='#'>
+                <object type='image/svg+xml' ref={(el=>arrow=el)} data={props.arrow}></object>
+            </a> */}
         </div>
     );
 }
