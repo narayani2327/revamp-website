@@ -87,6 +87,9 @@
     position: relative;
     top: 300px;
 }
+.event{
+    overflow: hidden;
+}
 .event, .about{
     background-image: linear-gradient(to right, var(--black), var(--black) , var(--darkBlue));
 }
@@ -115,6 +118,17 @@
     display: none;
     font-weight: 400;
 }
+.hack{
+    position: relative;
+    left: -1200px;
+}
+.hackdays{
+    position: relative;
+}
+.days{
+    position: relative;
+    right: -1200px;
+}
 .hack a, .hackdays a, .days a{
     text-decoration: none;
     color: var(--black);
@@ -133,7 +147,6 @@
 .active-div{
     display: block;
 }
-
 
 .about{
     color: white;
@@ -191,31 +204,3 @@
     height: 180px;
     border: solid white 5px;
 }
-/* @keyframes fade-right {
-    0% {
-      transform: translateX(200px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  @keyframes fade-left {
-    0% {
-      transform: translateX(-200px);
-      opacity: 0;
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  } */
-  /* .data.right{
-    animation: fade-right 1s ease-in; 
-    opacity: 1;
-  }
-  .data.left{
-    animation: fade-left 1s ease-in; 
-    opacity: 1;
-  } */
