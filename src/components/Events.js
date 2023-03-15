@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-// function displayDiv(){
-//     document.getElementsByClassName("hack").style.display = "none";
-//     document.getElementsByClassName("hackdays").style.display = "none";
-//     document.getElementsByClassName("days").style.display = "none";
-// }
+function displayDiv(){
+    document.querySelector(".hack").style.display = "none";
+    document.querySelector(".hackdays").style.display = "none";
+    document.querySelector(".days").style.display = "none";
+}
 function Events() {
     useEffect(()=>{
         var hack=document.getElementById("hack")
@@ -13,16 +13,22 @@ function Events() {
             hack.classList.add("active")
             hackdays.classList.remove("active")
             days.classList.remove("active")
+            displayDiv()
+            document.querySelector(".hack").style.display = "block";
         });
         hackdays.addEventListener("click",()=>{
             hackdays.classList.add("active")
             hack.classList.remove("active")
             days.classList.remove("active")
+            displayDiv()
+            document.querySelector(".hackdays").style.display = "block";
         });
         days.addEventListener("click",()=>{
             days.classList.add("active")
             hackdays.classList.remove("active")
             hack.classList.remove("active")
+            displayDiv()
+            document.querySelector(".days").style.display = "block";
         });
     },[])
     return (
